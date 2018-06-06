@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.yatzy.controller.Hello_yatzyController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="900.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/emerald%20green.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="86.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hallo und herzlich Wilkommen beim Spiel Yatzy. Bei Yatzy, auch bekannt als Yahtzee, Kniffel oder Pasch, geht es darum, mit 5 Würfeln die Kombinationen zu erwürfeln, welche in der Spieletabelle vorgegeben sind. Gespielt werden 13 Runden, da es 13 verschiedene Kombinationen gibt. Jeder Spieler darf pro Runde dreimal hintereinander würfeln. Nach jedem Wurf muss er entscheiden, welche Würfel er hält und mit welchen er weiter würfelt. Man kann jedoch nach jedem Wurf, falls die erwünschte Kombination bereits erreicht wurde, diese auch auswählen. Spätestens nach dem 3. Wurf muss man eine Kombination auswählen. Ist jedoch eine Form bereits belegt, so kann der betreffende Eintrag nicht mehr korrigiert werden, so hat der Spieler einmalig durch das Feld &quot;Chance&quot; die Möglichkeit, die Summe seiner 5 Würfel einzutragen. Ist auch dieses Feld belegt, muss eine freie Kombination gestrichen werden. Dazu wählt man einfach das Feld aus, welches man streichen will und drückt auf &quot;Bestätigen&quot;, wodurch diese Kombination gesperrt wird und man keine Punkte bekommt. Der Spieler mit den meisten Punkten gewinnt. Bitte drücken Sie auf &quot;Spielen!&quot; um das Spiel zu starten.   " textAlignment="CENTER" wrappingWidth="728.6220703125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="381.0" layoutY="485.0" onAction="#next" prefHeight="37.0" prefWidth="135.0" stylesheets="@../styles/Styles.css" text="Spielen" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         
+      </JFXButton>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="349.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Yatzy-01.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

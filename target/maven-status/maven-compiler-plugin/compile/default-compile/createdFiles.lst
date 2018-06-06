@@ -1,0 +1,9 @@
+com\mycompany\yatzy\model\GegnerChecker.class
+com\mycompany\yatzy\model\Bot.class
+com\mycompany\yatzy\model\Würfel.class
+com\mycompany\yatzy\MainApp.class
+com\mycompany\yatzy\model\User.class
+com\mycompany\yatzy\model\Model.class
+com\mycompany\yatzy\controller\Hello_yatzyController.class
+com\mycompany\yatzy\model\Figur.class
+com\mycompany\yatzy\controller\YatzyController.class
