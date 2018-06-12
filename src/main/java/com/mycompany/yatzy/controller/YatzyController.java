@@ -663,7 +663,7 @@ public class YatzyController implements Initializable {
     //By pressing this Button you will get back to the start page
     @FXML
     private void back(ActionEvent event) throws IOException {
-        Optional<ButtonType> result = createAlert("Verlassen", "Wenn Sie das Spiel jetzt verlassen, dann verlieren Sie ihren Einsatz. Sind Sie sicher, dass Sie das Spiel verlassen wollen?");
+        Optional<ButtonType> result = createAlert("Verlassen", "Sind Sie sicher, dass Sie das Spiel verlassen wollen?");
         if (result.get() == ButtonType.OK) {
             backToHome(event);
         }
@@ -672,7 +672,7 @@ public class YatzyController implements Initializable {
     //by pressing this button you will get back to the home screen
     private void backToHome(ActionEvent event) {
         try {
-            Parent homeView = FXMLLoader.load(getClass().getResource("/fxml/Scene_Spieleauswahl.fxml"));
+            Parent homeView = FXMLLoader.load(getClass().getResource("/fxml/Hello_Yatzy.fxml"));
             Scene spieleAuswahl = new Scene(homeView);
 
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -691,7 +691,7 @@ public class YatzyController implements Initializable {
         btnNewGame.setOpacity(1.0);
         btnWuerfeln.setDisable(true);
         btnConfirm.setDisable(true);
-
+        btnNewGame.setDisable(false);
     }
 
     //starts if the player looses
@@ -700,6 +700,7 @@ public class YatzyController implements Initializable {
         btnNewGame.setOpacity(1.0);
         btnWuerfeln.setDisable(true);
         btnConfirm.setDisable(true);
+        btnNewGame.setDisable(false);
     }
 
     //starts if the player gets a tie
@@ -708,14 +709,15 @@ public class YatzyController implements Initializable {
         btnWuerfeln.setDisable(true);
         btnConfirm.setDisable(true);
         createAlert("Unentschieden", "Sie haben ein Unentschieden klicken Sie oben links auf 'Neu Starten'");
+        btnNewGame.setDisable(false);
     }
 
     //will appear when the game is finished
     @FXML
     private void newGame(ActionEvent event) throws IOException {
-        btnNewGame.setDisable(false);
+        
 
-        Parent homeView = FXMLLoader.load(getClass().getResource("/fxml/yatzy/Hello_Yatzy.fxml"));
+        Parent homeView = FXMLLoader.load(getClass().getResource("/fxml/Hello_Yatzy.fxml"));
         Scene spieleAuswahl = new Scene(homeView);
 
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
